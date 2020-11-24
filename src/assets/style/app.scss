@@ -1,0 +1,60 @@
+.app {
+  background-color: #111;
+  color: white;
+}
+
+.category {
+  margin-left: 20px;
+
+  &__items {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: all .4s;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+    &-originals {
+      max-height: 250px;
+    }
+  }
+}
+
+.banner {
+  height: 100vh;
+
+  &__vertical-mask {
+    height: inherit;
+    width: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+  }
+
+  &__horizontal-mask {
+    height: inherit;
+    width: inherit;
+    background: linear-gradient(to right, #111, transparent);
+  }
+
+  &__info {
+    display: flex;
+
+  }
+
+}
