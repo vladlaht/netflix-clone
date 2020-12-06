@@ -19,7 +19,7 @@ const HeaderContainer = () => {
 
     return (
         <>
-            {movie && <Header movie={movie}/>}
+            <Header movie={movie}/>
         </>
     );
 };
